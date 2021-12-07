@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Página de Contacto
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Contacto:</h1>
+    <p>Nombre: Daniel Martín </p>
+    <p>email: edmartin_2@hotmail.com</p>
+    <b>{{Nombre}}</b>
+    <p>{{lista_numeros}}</p>
+    {%for x in lista_numeros%}
+        {%if x > 10%}
+        Su número superó lo establecido
+        {%else%}
+        En número ingresado está dentro de los parámetros
+        {%endif%}
+    <p>HOLA  {{x}}</p>
+    {%endfor%}
+    {%if Edad > 18%}
+        <p>Es mayor de edad</p>
+    {%else%}
+        <p>Es menor de edad</p>
+    {%endif%}
+{% endblock contenido %}
